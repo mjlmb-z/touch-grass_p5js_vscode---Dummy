@@ -366,13 +366,18 @@ function touchPressed() {
 }
 
 function updateSargLayout(){
+
   if (width < 430) {
-    scaleFactor = constrain(min(width / 390, height / 844), 0.75, 1);
-  } else if (width < 1024) {
-    scaleFactor = constrain(min(width / 834, height / 1194), 0.85, 1.2);
-  } else {
+    scaleFactor = map(width, 320, 430, 0.55, 0.9);
+  } 
+  else if (width < 1024) {
+    scaleFactor = map(width, 430, 1024, 0.85, 1.1);
+  } 
+  else {
     scaleFactor = 1;
   }
+
+  scaleFactor = constrain(scaleFactor, 0.55, 1);
 
   let w = 400 * scaleFactor;
   let h = 800 * scaleFactor;
@@ -380,7 +385,7 @@ function updateSargLayout(){
   let y = (height - h) * 0.6;
 
   mySarg = new sarg(w, h, x, y);
-
+  
 }
 
 function windowResized(){
