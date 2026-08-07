@@ -377,6 +377,7 @@ function updateSargLayout(){
   } 
   else {
     scaleFactor = 1;
+    textScale = 1;
   }
 
   scaleFactor = constrain(scaleFactor, 0.55, 1);
