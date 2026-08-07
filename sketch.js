@@ -232,13 +232,13 @@ function draw() {
     }
     
     // FADE BOTH OUT: frames 240-300
-    if (gameOverTimer >= 630 && gameOverTimer <= 720) {
+    if (gameOverTimer >= 630 && gameOverTimer <= 670) {
       let fadeProgress = (gameOverTimer - 420) * 12.5;
       block1Alpha = max(0, 255 - fadeProgress);
       block2Alpha = max(0, 255 - fadeProgress);
     }
     
-    if (gameOverTimer > 670) //CHANGE HERE, TIMEOUT TIME TO START (840 def not)
+    if (gameOverTimer > 630) //CHANGE HERE, TIMEOUT TIME TO START (840 def not)
     {
       gameOverActive = false;
       gameStarted = false;
