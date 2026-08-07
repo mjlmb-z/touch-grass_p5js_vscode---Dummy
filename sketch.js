@@ -368,7 +368,7 @@ function touchPressed() {
 
 function updateSargLayout(){
 
-  textScale = scaleFactor * 0.8;
+  textScale = scaleFactor * 0.5;
 
   if (width < 430) {
     scaleFactor = map(width, 320, 430, 0.55, 0.9);
