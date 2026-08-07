@@ -31,7 +31,7 @@ function preload() {
     img[i] = loadImage("images/" + (i + 1) + ".png");
   }
 
-  font = loadFont("fonts/Fake Receipt.otf")
+  font = loadFont("fonts/FakeReceipt.otf")
   sub_font = loadFont("fonts/Helvetica.ttf");
 
   click = loadSound('assets/softpop.mp3');
