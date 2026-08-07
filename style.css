@@ -9,6 +9,8 @@ body {
 
 canvas {
   position: fixed;
+  top: 0;
+  left: 0;
   inset: 0;
   z-index: 0;
   display: block;
@@ -48,5 +50,5 @@ canvas {
   pointer-events: auto;
   touch-action: manipulation;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.6);
 }
