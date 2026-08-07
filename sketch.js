@@ -238,7 +238,7 @@ function draw() {
       block2Alpha = max(0, 255 - fadeProgress);
     }
     
-    if (gameOverTimer > 720) //CHANGE HERE, TIMEOUT TIME TO START (840 def)
+    if (gameOverTimer > 670) //CHANGE HERE, TIMEOUT TIME TO START (840 def not)
     {
       gameOverActive = false;
       gameStarted = false;
