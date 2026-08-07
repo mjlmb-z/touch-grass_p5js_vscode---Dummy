@@ -316,6 +316,10 @@ function updateParticles() {
 
 function touchStarted() {
 
+  if (event.target.closest("#footer-line")) {
+    return true;
+  }
+
   userStartAudio();
 
   if (gameOverActive){
@@ -361,6 +365,11 @@ function touchStarted() {
 
 
 function touchPressed() {
+
+  if (event.target.closest("#footer-line")) {
+    return true;
+  }
+  
   touchStarted(); 
   return false;
 }
