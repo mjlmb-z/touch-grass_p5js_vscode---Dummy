@@ -24,6 +24,7 @@ let promptX = 0;
 let promptY = 0;
 
 let scaleFactor = 1;
+let textScale = 1;
 
 
 function preload() {
@@ -157,7 +158,7 @@ function draw() {
     textFont(font);
     textAlign(CENTER, CENTER);
     fill(250, 255, 230, 222);
-    textSize(27 * scaleFactor);
+    textSize(27 * textScale);
     text("Touch to begin", width / 2, height * 0.72);
     if (frameCount % 60 < 30) return;  
     return;
@@ -179,7 +180,7 @@ function draw() {
     textFont(font);
     textAlign(LEFT,CENTER);
     fill(20, 255, 200, a);
-    textSize(24 * scaleFactor);
+    textSize(24 * textScale);
     text("Hello, I'm Sarg", (width * 0.5) + (width*0.11) , height * 0.67);
     
     // sub dialogue (keep tapping)
@@ -192,7 +193,7 @@ function draw() {
         textFont(sub_font);
         textAlign(LEFT,CENTER);
         fill(255, 250, 255, keepTapAlpha);
-        textSize(22 * scaleFactor);
+        textSize(22 * textScale);
         text("keep tapping", (width * 0.5) + (width*0.11), height * 0.70);
       }
 
@@ -250,12 +251,12 @@ function draw() {
     textFont(font);
     textAlign(CENTER, CENTER);
     fill(255, 255, 255, block1Alpha);
-    textSize(24 * scaleFactor);
+    textSize(24 * textScale);
     text("I am a digital grass.\nI fail when overused.", width/2, height*0.63);
     
     fill(255, 255, 255, block2Alpha);
     textAlign(CENTER, CENTER);
-    textSize(24 * scaleFactor);
+    textSize(24 * textScale);
     text("Real grass doesn't.\nTouch that instead.", width/2, height*0.63);
   
     return;  
@@ -299,7 +300,7 @@ function draw() {
     textFont(sub_font);
     textAlign(LEFT, LEFT);
     fill(255, 0, 0, a);
-    textSize(20 * scaleFactor);
+    textSize(20 * textScale);
     text("kindly tap on\nthe grass x)", promptX, promptY);
     promptTimer--;
   }
@@ -367,6 +368,8 @@ function touchPressed() {
 
 function updateSargLayout(){
 
+  textScale = scaleFactor * 0.8;
+
   if (width < 430) {
     scaleFactor = map(width, 320, 430, 0.55, 0.9);
   } 
@@ -385,7 +388,7 @@ function updateSargLayout(){
   let y = (height - h) * 0.6;
 
   mySarg = new sarg(w, h, x, y);
-  
+
 }
 
 function windowResized(){
