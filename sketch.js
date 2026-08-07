@@ -193,7 +193,7 @@ function draw() {
         textAlign(LEFT,CENTER);
         fill(255, 250, 255, keepTapAlpha);
         textSize(22 * textScale);
-        text("keep tapping", (width * 0.5) + (width*0.11), height * 0.70);
+        text("keep tapping", (width * 0.5) + (width*0.11), height * 0.72);
       }
 
     if (d >= 289) dialogueShown = true;
