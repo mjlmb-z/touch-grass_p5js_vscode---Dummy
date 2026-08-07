@@ -383,7 +383,7 @@ function updateSargLayout(){
 
   let w = 400 * scaleFactor;
   let h = 800 * scaleFactor;
-  let x = (width - w) / 2 + (w/2);
+  let x = (width - w) / 2;
   let y = (height - h) * 0.6;
 
   mySarg = new sarg(w, h, x, y);
