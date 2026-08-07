@@ -370,7 +370,7 @@ function updateSargLayout(){
   if (width < 430) {
     scaleFactor = map(width, 320, 430, 0.55, 0.9);
   } 
-  else if (width < 1024) {
+  else if (width < 760) {
     scaleFactor = map(width, 430, 1024, 0.85, 1.1);
   } 
   else {
