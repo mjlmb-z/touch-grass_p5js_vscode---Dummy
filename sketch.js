@@ -158,7 +158,7 @@ function draw() {
     textFont(font);
     textAlign(CENTER, CENTER);
     fill(250, 255, 230, 222);
-    textSize(27 * textScale);
+    textSize(27);
     text("Touch to begin", width / 2, height * 0.72);
     if (frameCount % 60 < 30) return;  
     return;
@@ -251,12 +251,12 @@ function draw() {
     textFont(font);
     textAlign(CENTER, CENTER);
     fill(255, 255, 255, block1Alpha);
-    textSize(24 * textScale);
+    textSize(24);
     text("I am a digital grass.\nI fail when overused.", width/2, height*0.63);
     
     fill(255, 255, 255, block2Alpha);
     textAlign(CENTER, CENTER);
-    textSize(24 * textScale);
+    textSize(24);
     text("Real grass doesn't.\nTouch that instead.", width/2, height*0.63);
   
     return;  
@@ -300,7 +300,7 @@ function draw() {
     textFont(sub_font);
     textAlign(LEFT, LEFT);
     fill(255, 0, 0, a);
-    textSize(20 * textScale);
+    textSize(20);
     text("kindly tap on\nthe grass x)", promptX, promptY);
     promptTimer--;
   }
@@ -368,8 +368,6 @@ function touchPressed() {
 
 function updateSargLayout(){
 
-  textScale = scaleFactor * 0.5;
-
   if (width < 430) {
     scaleFactor = map(width, 320, 430, 0.55, 0.9);
   } 
@@ -381,10 +379,11 @@ function updateSargLayout(){
   }
 
   scaleFactor = constrain(scaleFactor, 0.55, 1);
+  textScale = scaleFactor * 0.5;
 
   let w = 400 * scaleFactor;
   let h = 800 * scaleFactor;
-  let x = (width - w) / 2;
+  let x = (width - w) / 2 + (w/2);
   let y = (height - h) * 0.6;
 
   mySarg = new sarg(w, h, x, y);
