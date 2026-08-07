@@ -116,7 +116,6 @@ async function setup() {
 
   //   mySarg = new sarg(w, h, x, y);   
     
-  //   scalef = 0.27;
   // }
   
 }
@@ -300,7 +299,7 @@ function draw() {
     textFont(sub_font);
     textAlign(LEFT, LEFT);
     fill(255, 0, 0, a);
-    textSize(20);
+    textSize(20 * scaleFactor);
     text("kindly tap on\nthe grass x)", promptX, promptY);
     promptTimer--;
   }
@@ -383,7 +382,8 @@ function updateSargLayout(){
 
   let w = 400 * scaleFactor;
   let h = 800 * scaleFactor;
-  let x = (width - w) / 2 - (w/2);
+  //let x = (width - w) / 2 - (w/2);
+  let x = w;
   let y = (height - h) * 0.6;
 
   mySarg = new sarg(w, h, x, y);
