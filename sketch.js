@@ -28,14 +28,14 @@ let scaleFactor = 1;
 
 function preload() {
   for (let i = 0; i < 31; i++) {
-    img[i] = loadImage("/images/" + (i + 1) + ".png");
+    img[i] = loadImage("images/" + (i + 1) + ".png");
   }
 
-  font = loadFont("/fonts/Fake Receipt.otf")
-  sub_font = loadFont("/fonts/Helvetica.ttf");
+  font = loadFont("fonts/Fake Receipt.otf")
+  sub_font = loadFont("fonts/Helvetica.ttf");
 
-  click = loadSound('/assets/softpop.mp3');
-  endSound = loadSound('/assets/softpop.mp3');
+  click = loadSound('assets/softpop.mp3');
+  endSound = loadSound('assets/softpop.mp3');
 }
 
 class sarg {
